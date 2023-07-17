@@ -9,7 +9,7 @@ public class TrainTest {
 
     @BeforeEach
     public void setUp() {
-        train = new Train(true, 4, "Electric");
+        train = new Train(100, 500, "rail", 1_000_000, 200_000, true, 7, "Overhead");
     }
 
     @Test
@@ -23,7 +23,7 @@ public class TrainTest {
     @Test
     public void canGetNumberOfCarriages() {
         int actual = train.getNumberOfCarriages();
-        int expected = 4;
+        int expected = 7;
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -31,7 +31,7 @@ public class TrainTest {
     @Test
     public void canGetPowerSource() {
         String actual = train.getPowerSource();
-        String expected = "Electric";
+        String expected = "Overhead";
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -71,8 +71,15 @@ public class TrainTest {
         train.addCarriage(4);
 
         int actual = train.getNumberOfCarriages();
-        int expected = 8;
+        int expected = 11;
 
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    public void canMakeNoise() {
+        String actual = train.makeNoise();
+        String expected = "Choo Choo!";
         assertThat(actual).isEqualTo(expected);
     }
 

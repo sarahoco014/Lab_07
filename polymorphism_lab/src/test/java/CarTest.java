@@ -9,12 +9,12 @@ public class CarTest {
 
     @BeforeEach
     public void setUp() {
-        car = new Car("Manual");
+        car = new Car(4, 5, "road", 50_000, 10_000, "Manual");
     }
 
     @Test
     public void canGetTransmissionType() {
-        String actual = car.getTransmissonType();
+        String actual = car.getTransmissionType();
         String expected = "Manual";
 
         assertThat(actual).isEqualTo(expected);
@@ -22,9 +22,9 @@ public class CarTest {
 
     @Test
     public void canSetTransmissionType() {
-        car.setTransmissonType("Automatic");
+        car.setTransmissionType("Automatic");
 
-        String actual = car.getTransmissonType();
+        String actual = car.getTransmissionType();
         String expected = "Automatic";
 
         assertThat(actual).isEqualTo(expected);
@@ -35,6 +35,13 @@ public class CarTest {
         String actual = car.playMusic();
         String expected = "I am playing Taylor Swift music!";
 
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    public void canMakeNoise() {
+        String actual = car.makeNoise();
+        String expected = "Vroom!";
         assertThat(actual).isEqualTo(expected);
     }
 }

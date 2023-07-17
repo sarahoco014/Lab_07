@@ -1,20 +1,31 @@
-public class Car {
+public class Car extends Vehicle {
 
-    private String transmissonType;
+    private String transmissionType;
 
-    public Car(String transmissonType) {
-        this.transmissonType = transmissonType;
+    public Car(int numberOfWheels,
+               int maximumOccupancy,
+               String travelType,
+               int sellPrice,
+               int costToMake,
+               String transmissionType) {
+        super(numberOfWheels, maximumOccupancy, travelType, sellPrice, costToMake);
+        this.transmissionType = transmissionType;
     }
 
-    public String getTransmissonType() {
-        return transmissonType;
+    public String getTransmissionType() {
+        return transmissionType;
     }
 
-    public void setTransmissonType(String transmissonType) {
-        this.transmissonType = transmissonType;
+    public void setTransmissionType(String transmissionType) {
+        this.transmissionType = transmissionType;
     }
 
     public String playMusic() {
         return "I am playing Taylor Swift music!";
+    }
+
+    @Override
+    public String makeNoise() {
+        return "Vroom!";
     }
 }

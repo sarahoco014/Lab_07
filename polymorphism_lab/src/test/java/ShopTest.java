@@ -72,8 +72,8 @@ public class ShopTest {
 
     @Test
     public void canAddVehicleToStock() {
-        Vehicle vehicle = new Vehicle(4, 5, "road", 50_000, 10_000);
-        shop.addVehicleToStock(vehicle);
+        Car car = new Car(4, 5, "road", 50_000, 10_000, "Manual");
+        shop.addVehicleToStock(car);
 
         assertThat(shop.countVehicles()).isEqualTo(1);
     }
@@ -85,13 +85,9 @@ public class ShopTest {
 
     @Test
     public void canSellVehicles() {
-        Vehicle vehicle = new Vehicle(4,
-                5,
-                "road",
-                50_000,
-                10_000);
+        Car car = new Car(4, 5, "Road", 50_000, 20_000, "Manual");
 
-        shop.sellVehicle(vehicle);
+        shop.sellVehicle(car);
 
         double actualShopTill = shop.getTill();
         double expectedShopTill = 60_000;

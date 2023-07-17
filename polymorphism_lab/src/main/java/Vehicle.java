@@ -1,4 +1,4 @@
-public class Vehicle {
+public abstract class Vehicle {
 
     private int numberOfWheels;
     private int maximumOccupancy;
@@ -56,5 +56,9 @@ public class Vehicle {
 
     public void setCostToMake(int cost) {
         this.costToMake = cost;
+    }
+
+    public String makeNoise() {
+        return "Hello, I am making a vehicle noise!";
     }
 }

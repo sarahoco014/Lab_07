@@ -9,13 +9,13 @@ public class HelicopterTest {
 
     @BeforeEach
     public void setUp() {
-        helicopter = new Helicopter(40_000);
+        helicopter = new Helicopter(4, 5, "air", 100_000, 30_000, 35_000);
     }
 
     @Test
     public void canGetMaximumAltitude() {
         double actual = helicopter.getMaximumAltitude();
-        double expected = 40_000;
+        double expected = 35_000;
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -36,6 +36,13 @@ public class HelicopterTest {
         String actual = helicopter.fly();
         String expected = "I can fly!";
 
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    public void canMakeNoise() {
+        String actual = helicopter.makeNoise();
+        String expected = "Brrr!";
         assertThat(actual).isEqualTo(expected);
     }
 }

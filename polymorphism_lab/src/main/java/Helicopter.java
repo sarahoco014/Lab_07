@@ -1,8 +1,14 @@
-public class Helicopter {
+public class Helicopter extends Vehicle {
 
     private double maximumAltitude;
 
-    public Helicopter(double maximumAltitude) {
+    public Helicopter(int numberOfWheels,
+                      int maximumOccupancy,
+                      String travelType,
+                      int sellPrice,
+                      int costToMake,
+                      double maximumAltitude) {
+        super(numberOfWheels, maximumOccupancy, travelType, sellPrice, costToMake);
         this.maximumAltitude = maximumAltitude;
     }
 
@@ -16,6 +22,11 @@ public class Helicopter {
 
     public String fly() {
         return "I can fly!";
+    }
+
+    @Override
+    public String makeNoise() {
+        return "Brrr!";
     }
 
 }
