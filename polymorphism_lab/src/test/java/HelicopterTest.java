@@ -16,14 +16,17 @@ public class HelicopterTest {
     public void canGetMaximumAltitude() {
         double actual = helicopter.getMaximumAltitude();
         double expected = 40_000;
+
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     public void canSetMaximumAltitude() {
         helicopter.setMaximumAltitude(50_000);
+
         double actual = helicopter.getMaximumAltitude();
         double expected = 50_000;
+
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -32,6 +35,7 @@ public class HelicopterTest {
     public void canFly() {
         String actual = helicopter.fly();
         String expected = "I can fly!";
+
         assertThat(actual).isEqualTo(expected);
     }
 }

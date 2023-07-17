@@ -6,7 +6,11 @@ public class Vehicle {
     private int sellPrice;
     private int costToMake;
 
-    public Vehicle(int numberOfWheels, int maximumOccupancy, String travelType, int sellPrice, int costToMake) {
+    public Vehicle(int numberOfWheels,
+                   int maximumOccupancy,
+                   String travelType,
+                   int sellPrice,
+                   int costToMake) {
         this.numberOfWheels = numberOfWheels;
         this.maximumOccupancy = maximumOccupancy;
         this.travelType = travelType;

@@ -6,7 +6,8 @@ public class Shop {
     private ArrayList<Vehicle> vehicles;
     private double till;
 
-    public Shop(String name, double till) {
+    public Shop(String name,
+                double till) {
         this.name = name;
         this.vehicles = new ArrayList<Vehicle>();
         this.till = till;

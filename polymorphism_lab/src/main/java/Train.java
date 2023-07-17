@@ -4,7 +4,9 @@ public class Train {
     private int numberOfCarriages;
     private String powerSource;
 
-    public Train(boolean operationalStatus, int numberOfCarriages, String powerSource) {
+    public Train(boolean operationalStatus,
+                 int numberOfCarriages,
+                 String powerSource) {
         this.operationalStatus = operationalStatus;
         this.numberOfCarriages = numberOfCarriages;
         this.powerSource = powerSource;
