@@ -1,4 +1,6 @@
-public class Car extends Vehicle {
+import interfaces.IBreak;
+
+public class Car extends Vehicle implements IBreak {
 
     private String transmissionType;
 
@@ -24,8 +26,21 @@ public class Car extends Vehicle {
         return "I am playing Taylor Swift music!";
     }
 
+    // Overloaded Method
+
+    public String playMusic(String musicType) {
+        return "I am playing " + musicType + " music!";
+    }
+
     @Override
     public String makeNoise() {
         return "Vroom!";
     }
+
+    public String breaking(boolean breaks) {
+        return "I am able to emergency break on the road: " + breaks;
+    }
+
+
+
 }

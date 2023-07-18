@@ -49,4 +49,10 @@ public class Shop {
         till += vehicle.getSellPrice();
         vehicles.remove(vehicle);
     }
+
+    public void allVehiclesMakeNoise() { // all vehicles make noise when this method is called
+        for (Vehicle vehicle : this.vehicles) {
+            vehicle.makeNoise();
+        }
+    }
 }

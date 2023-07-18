@@ -83,4 +83,11 @@ public class TrainTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    @Test
+    public void canBreaking() {
+        String actual = train.breaking(true);
+        String expected = "I am able to emergency break on the tracks: true";
+        assertThat(actual).isEqualTo(expected);
+    }
+
 }

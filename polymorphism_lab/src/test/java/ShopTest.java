@@ -98,4 +98,14 @@ public class ShopTest {
         assertThat(actualShopTill).isEqualTo(expectedShopTill);
         assertThat(actualShopVehicles).isEqualTo(expectedShopVehicles);
     }
+
+    @Test
+    public void canAddMultipleVehiclesToStock() {
+        Car car = new Car(4, 5, "road", 50_000, 20_000, "Manual");
+        Helicopter helicopter = new Helicopter(2, 10, "air", 100_000, 20_000, 35_000);
+        shop.addVehicleToStock(car);
+        shop.addVehicleToStock(helicopter);
+        shop.allVehiclesMakeNoise();
+        assertThat(shop.countVehicles()).isEqualTo(2);
+    }
 }

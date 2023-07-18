@@ -18,47 +18,52 @@ public abstract class Vehicle {
         this.costToMake = costToMake;
     }
 
-    public int getNumberOfWheels() {
-        return numberOfWheels;
-    }
+//    public int getNumberOfWheels() {
+//        return numberOfWheels;
+//    }
 
-    public int getMaximumOccupancy() {
-        return maximumOccupancy;
-    }
+//    public int getMaximumOccupancy() {
+//        return maximumOccupancy;
+//    }
 
-    public String getTravelType() {
-        return travelType;
-    }
+//    public String getTravelType() {
+//        return travelType;
+//    }
 
     public int getSellPrice() {
         return sellPrice;
     }
 
-    public int getCostToMake() {
-        return costToMake;
-    }
+//    public int getCostToMake() {
+//        return costToMake;
+//    }
 
-    public void setNumberOfWheels(int numberOfWheels) {
-        this.numberOfWheels = numberOfWheels;
-    }
+//    public void setNumberOfWheels(int numberOfWheels) {
+//        this.numberOfWheels = numberOfWheels;
+//    }
 
-    public void setMaximumOccupancy(int maximumOccupancy) {
-        this.maximumOccupancy = maximumOccupancy;
-    }
+//    public void setMaximumOccupancy(int maximumOccupancy) {
+//        this.maximumOccupancy = maximumOccupancy;
+//    }
 
-    public void setTravelType(String travelType) {
-        this.travelType = travelType;
-    }
+//    public void setTravelType(String travelType) {
+//        this.travelType = travelType;
+//    }
 
-    public void setSellPrice(int sellPrice) {
-        this.sellPrice = sellPrice;
-    }
+//    public void setSellPrice(int sellPrice) {
+//        this.sellPrice = sellPrice;
+//    }
 
-    public void setCostToMake(int cost) {
-        this.costToMake = cost;
-    }
+//    public void setCostToMake(int cost) {
+//        this.costToMake = cost;
+//    }
 
-    public String makeNoise() {
-        return "Hello, I am making a vehicle noise!";
-    }
+//    public String makeNoise() {
+//        return "Hello, I am making a vehicle noise!";
+//    }
+//      old method before implementation of abstract method
+
+
+    // Defining abstract method
+        public abstract String makeNoise();
 }

@@ -1,4 +1,6 @@
-public class Train extends Vehicle {
+import interfaces.IBreak;
+
+public class Train extends Vehicle implements IBreak {
 
     private boolean operationalStatus;
     private int numberOfCarriages;
@@ -49,6 +51,10 @@ public class Train extends Vehicle {
     @Override
     public String makeNoise() {
         return "Choo Choo!";
+    }
+
+    public String breaking(boolean breaks) {
+        return "I am able to emergency break on the tracks: " + breaks;
     }
 
 }

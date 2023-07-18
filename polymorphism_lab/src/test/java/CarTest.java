@@ -38,10 +38,27 @@ public class CarTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    // Overloaded Method Test
+
+    @Test
+    public void canPlaySpecificMusic() {
+        String actual = car.playMusic("rock");
+        String expected = "I am playing rock music!";
+        assertThat(actual).isEqualTo(expected);
+    }
+
     @Test
     public void canMakeNoise() {
         String actual = car.makeNoise();
         String expected = "Vroom!";
         assertThat(actual).isEqualTo(expected);
     }
+
+    @Test
+    public void canBreaking() {
+        String actual = car.breaking(true);
+        String expected = "I am able to emergency break on the road: true";
+        assertThat(actual).isEqualTo(expected);
+    }
+
 }
