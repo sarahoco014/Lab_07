@@ -10,10 +10,14 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThatCode;
 public class ShopTest {
 
     private Shop shop;
+    private Car car;
+    private Train train;
 
     @BeforeEach
     public void setUp() {
         shop = new Shop("VehiclesRUs", 10_000);
+        car = new Car(4, 5, "road", 50_000, 20_000, "Manual");
+        train = new Train(100, 200, "rail", 100_000, 30_000, true, 7, "Overhead");
     }
 
     @Test
@@ -103,9 +107,19 @@ public class ShopTest {
     public void canAddMultipleVehiclesToStock() {
         Car car = new Car(4, 5, "road", 50_000, 20_000, "Manual");
         Helicopter helicopter = new Helicopter(2, 10, "air", 100_000, 20_000, 35_000);
+
         shop.addVehicleToStock(car);
         shop.addVehicleToStock(helicopter);
         shop.allVehiclesMakeNoise();
+
         assertThat(shop.countVehicles()).isEqualTo(2);
+    }
+
+    @Test
+    public void canAddCarToShop() {
+        shop.addBreakableVehicles(car);
+        shop.addBreakableVehicles(train);
+
+        System.out.println(shop.getBreakableVehicles());
     }
 }

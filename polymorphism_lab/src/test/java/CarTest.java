@@ -56,7 +56,7 @@ public class CarTest {
 
     @Test
     public void canBreaking() {
-        String actual = car.breaking(true);
+        String actual = car.emergencyBreak(true);
         String expected = "I am able to emergency break on the road: true";
         assertThat(actual).isEqualTo(expected);
     }

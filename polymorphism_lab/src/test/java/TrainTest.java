@@ -80,13 +80,15 @@ public class TrainTest {
     public void canMakeNoise() {
         String actual = train.makeNoise();
         String expected = "Choo Choo!";
+
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
     public void canBreaking() {
-        String actual = train.breaking(true);
+        String actual = train.emergencyBreak(true);
         String expected = "I am able to emergency break on the tracks: true";
+
         assertThat(actual).isEqualTo(expected);
     }
 

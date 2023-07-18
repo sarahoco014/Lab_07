@@ -37,7 +37,7 @@ public class Car extends Vehicle implements IBreak {
         return "Vroom!";
     }
 
-    public String breaking(boolean breaks) {
+    public String emergencyBreak(boolean breaks) {
         return "I am able to emergency break on the road: " + breaks;
     }
 

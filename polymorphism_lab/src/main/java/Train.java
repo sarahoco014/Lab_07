@@ -53,7 +53,7 @@ public class Train extends Vehicle implements IBreak {
         return "Choo Choo!";
     }
 
-    public String breaking(boolean breaks) {
+    public String emergencyBreak(boolean breaks) {
         return "I am able to emergency break on the tracks: " + breaks;
     }
 

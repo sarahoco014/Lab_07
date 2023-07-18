@@ -1,16 +1,22 @@
+import interfaces.IBreak;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Shop {
 
     private String name;
     private ArrayList<Vehicle> vehicles;
     private double till;
+    private List<IBreak> vehiclesThatCanBreak;
+
 
     public Shop(String name,
                 double till) {
         this.name = name;
         this.vehicles = new ArrayList<Vehicle>();
         this.till = till;
+        this.vehiclesThatCanBreak = new ArrayList<>();
     }
 
     public String getName() {
@@ -55,4 +61,14 @@ public class Shop {
             vehicle.makeNoise();
         }
     }
+
+    public void addBreakableVehicles(IBreak car) {
+        this.vehiclesThatCanBreak.add(car);
+    }
+
+    public List<IBreak> getBreakableVehicles() {
+        return this.vehiclesThatCanBreak;
+    }
+
+
 }
